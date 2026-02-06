@@ -1,0 +1,99 @@
+# Monorepo .gitignore for Rezerwuj.ai
+# Covers Symfony (api/) and React (client/)
+
+###############################################################################
+# BACKEND (Symfony) - /api/
+###############################################################################
+
+# Dependencies
+api/vendor/
+
+# Symfony cache & logs
+api/var/cache/
+api/var/log/
+api/var/sessions/
+
+# Environment files
+api/.env.local
+api/.env.*.local
+api/.env.test
+api/.env.prod
+
+# PHPUnit
+api/.phpunit.result.cache
+api/phpunit.xml
+
+# Composer
+api/composer.lock
+
+# JWT keys (should be regenerated per environment)
+api/config/jwt/*.pem
+
+# Database
+api/var/data.db
+
+###############################################################################
+# FRONTEND (React + Vite) - /client/
+###############################################################################
+
+# Dependencies
+client/node_modules/
+
+# Build output
+client/dist/
+client/build/
+
+# Environment files
+client/.env.local
+client/.env.*.local
+
+# Logs
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+client/pnpm-debug.log*
+client/lerna-debug.log*
+
+# Editor directories and files
+client/.vscode/*
+!client/.vscode/extensions.json
+client/.idea
+client/.DS_Store
+client/*.suo
+client/*.ntvs*
+client/*.njsproj
+client/*.sln
+client/*.sw?
+
+###############################################################################
+# DOCKER
+###############################################################################
+
+# Docker volumes
+.docker/
+
+###############################################################################
+# GENERAL
+###############################################################################
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
+# Claude scratchpad
+.claude/

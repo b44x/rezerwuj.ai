@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Routing\Attribute\Route;
+
+class TestController extends AbstractController
+{
+    #[Route('/api/test', name: 'app_test')]
+    public function index(): JsonResponse
+    {
+        return $this->json([
+            'message' => 'Hello from Symfony API!',
+            'path' => 'src/Controller/TestController.php',
+        ]);
+    }
+}

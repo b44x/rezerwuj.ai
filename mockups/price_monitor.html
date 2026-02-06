@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitor Ceny | Rezerwuj.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #e2e8f0; }
+        .glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .chart-container { height: 200px; width: 100%; }
+    </style>
+</head>
+<body class="antialiased p-6">
+
+    <div class="max-w-4xl mx-auto space-y-6">
+        <h2 class="text-2xl font-black text-white flex items-center gap-3 italic">
+            <i data-lucide="trending-down" class="text-blue-500"></i> MONITOR CENY LIVE
+        </h2>
+
+        <div class="glass p-8 rounded-[2.5rem] border-teal-500/30 bg-teal-500/5">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <p class="text-[10px] font-black text-teal-400 uppercase tracking-[0.3em] mb-1">Alert Aktywny</p>
+                    <h3 class="text-xl font-bold text-white">Mitsis Laguna Resort</h3>
+                    <p class="text-sm text-slate-400">Wylot: Katowice (KTW) | 12.07 - 19.07</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-xs text-slate-500 mb-1 italic text-nowrap">Najniższa cena w historii</p>
+                    <div class="flex items-baseline gap-2 justify-end">
+                        <span class="text-4xl font-black text-white">9,820</span>
+                        <span class="text-sm text-slate-400">PLN</span>
+                    </div>
+                    <span class="text-[10px] bg-teal-500 text-white px-2 py-0.5 rounded-full font-bold">- 1,600 PLN względem zeszłego tygodnia</span>
+                </div>
+            </div>
+
+            <div class="mt-8 chart-container">
+                <canvas id="priceChart"></canvas>
+            </div>
+        </div>
+
+        <div class="glass p-8 rounded-[3rem]">
+            <h3 class="text-sm font-bold text-white mb-6 uppercase tracking-widest">Alternatywne miejsca wylotu</h3>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col gap-1">
+                    <span class="text-[10px] text-slate-500 font-bold">WARSZAWA (WAW)</span>
+                    <span class="text-lg font-bold text-white">10,200 PLN</span>
+                    <span class="text-[9px] text-red-400 font-bold">+380 PLN drożej</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-blue-600/10 border border-blue-500/20 flex flex-col gap-1">
+                    <span class="text-[10px] text-blue-400 font-bold">KRAKÓW (KRK)</span>
+                    <span class="text-lg font-bold text-white text-blue-400">9,550 PLN</span>
+                    <span class="text-[9px] text-teal-400 font-bold">-270 PLN TANIEJ!</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col gap-1 opacity-50">
+                    <span class="text-[10px] text-slate-500 font-bold">BERLIN (BER)</span>
+                    <span class="text-lg font-bold text-white italic">Brak lotów</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        
+        // Prosty wykres trendu cenowego
+        const ctx = document.getElementById('priceChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1 Cze', '7 Cze', '14 Cze', '21 Cze', 'Dziś'],
+                datasets: [{
+                    label: 'Cena (PLN)',
+                    data: [11420, 11200, 11800, 10500, 9820],
+                    borderColor: '#3b82f6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    borderWidth: 3,
+                    pointRadius: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { display: false }, ticks: { color: '#64748b', font: { size: 10 } } },
+                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#64748b', font: { size: 10 } } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezerwuj.ai | Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0b0f1a; color: #e2e8f0; }
+        .glass-panel { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); }
+        .offer-card:hover { transform: translateY(-4px); border-color: #3b82f6; }
+    </style>
+</head>
+<body class="h-screen overflow-hidden flex flex-col">
+
+    <header class="h-16 border-b border-white/5 flex items-center justify-between px-6 bg-slate-900/50">
+        <div class="flex items-center gap-4">
+            <div class="text-xl font-black tracking-tighter text-white">REZERWUJ<span class="text-blue-500">.AI</span></div>
+            <div class="h-6 w-px bg-white/10 mx-2"></div>
+            <div class="flex gap-2">
+                <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-md text-xs font-bold flex items-center gap-2">
+                    <i data-lucide="users" class="w-3 h-3"></i> 2+2 (6, 9 l.)
+                </span>
+                <span class="bg-slate-800 text-slate-400 px-3 py-1 rounded-md text-xs font-bold flex items-center gap-2">
+                    <i data-lucide="calendar" class="w-3 h-3"></i> Lipiec 2026
+                </span>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="text-slate-400 hover:text-white transition"><i data-lucide="bell" class="w-5 h-5"></i></button>
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-teal-400 border border-white/20"></div>
+        </div>
+    </header>
+
+    <div class="flex flex-1 overflow-hidden">
+        
+        <aside class="w-80 border-r border-white/5 p-6 flex flex-col gap-6 bg-slate-900/30">
+            <div>
+                <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 block font-mono text-blue-400">Polecenie dla Agenta</label>
+                <textarea 
+                    class="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-sm focus:outline-none focus:border-blue-500 min-h-[120px] resize-none"
+                    placeholder="Np. 'Zmień na Hiszpanię i szukaj tylko hoteli z klubem dla dzieci'..."
+                ></textarea>
+                <button class="w-full mt-3 bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl font-bold text-sm transition shadow-lg shadow-blue-600/20">
+                    Aktualizuj wyniki
+                </button>
+            </div>
+
+            <div class="flex-1 overflow-y-auto">
+                <div class="glass-panel rounded-2xl p-4 space-y-4">
+                    <h4 class="text-xs font-bold text-slate-300 flex items-center gap-2 uppercase tracking-tight">
+                        <i data-lucide="cpu" class="w-3 h-3 text-blue-500"></i> Status Analizy
+                    </h4>
+                    <ul class="text-[11px] space-y-3 text-slate-400 font-mono">
+                        <li class="flex items-center gap-2 text-teal-400"><i data-lucide="check" class="w-3 h-3"></i> Profil rodziny załadowany</li>
+                        <li class="flex items-center gap-2 text-teal-400"><i data-lucide="check" class="w-3 h-3"></i> Pobrano ceny z 4 źródeł</li>
+                        <li class="flex items-center gap-2 animate-pulse"><i data-lucide="refresh-cw" class="w-3 h-3"></i> Szukanie opinii o basenach...</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex-1 overflow-y-auto p-8">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-1">Znalezione propozycje (8)</h2>
+                    <p class="text-sm text-slate-500 italic">"Wybrałem hotele z najlepszym stosunkiem ceny do atrakcji dla dzieci w wieku 6-9 lat."</p>
+                </div>
+                <div class="flex gap-2">
+                    <button class="bg-white/5 hover:bg-white/10 px-4 py-2 rounded-lg text-xs font-bold transition border border-white/5">Najtańsze</button>
+                    <button class="bg-blue-600 px-4 py-2 rounded-lg text-xs font-bold transition">Rekomendacja AI</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                
+                <div class="offer-card glass-panel rounded-[2rem] overflow-hidden transition-all duration-300 border border-white/5 flex flex-col">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-[10px] font-black px-2 py-1 rounded">TOP WYBÓR</div>
+                        <div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur px-3 py-1 rounded-full text-xs font-bold">★ 4.8</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-lg font-bold text-white mb-2">Aquatic Blue Resort</h3>
+                        <p class="text-[11px] text-slate-400 leading-relaxed mb-4 flex-1 italic">"AI: Ten hotel posiada największy park wodny w regionie i menu bezglutenowe."</p>
+                        
+                        <div class="flex justify-between items-end pt-4 border-t border-white/5">
+                            <div>
+                                <span class="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Cena AI</span>
+                                <div class="text-xl font-black text-white">4,120 <span class="text-xs font-normal">zł / os.</span></div>
+                            </div>
+                            <button class="bg-blue-600 hover:bg-blue-500 p-3 rounded-xl transition">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offer-card glass-panel rounded-[2rem] overflow-hidden transition-all duration-300 border border-white/5 flex flex-col opacity-90">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover grayscale-[30%]">
+                        <div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur px-3 py-1 rounded-full text-xs font-bold">★ 4.2</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-lg font-bold text-white mb-2">Sun & Sand Palace</h3>
+                        <p class="text-[11px] text-slate-400 leading-relaxed mb-4 flex-1">Standardowa oferta z biura. Dobra lokalizacja, ale baseny mniejsze niż w Aquatic Blue.</p>
+                        
+                        <div class="flex justify-between items-end pt-4 border-t border-white/5">
+                            <div>
+                                <span class="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Cena standard</span>
+                                <div class="text-xl font-black text-slate-300">3,850 <span class="text-xs font-normal text-slate-500">zł / os.</span></div>
+                            </div>
+                            <button class="bg-slate-700 hover:bg-slate-600 p-3 rounded-xl transition text-white">
+                                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

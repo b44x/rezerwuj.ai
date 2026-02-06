@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szczegóły Oferty | Rezerwuj.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #e2e8f0; }
+        .glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .ai-gradient { background: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%); }
+        .shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent); background-size: 200% 100%; animation: shimmer 2s infinite; }
+        @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-500/30">
+
+    <nav class="sticky top-0 z-50 glass border-b border-white/5 px-8 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-8">
+                <div class="text-xl font-black tracking-tighter text-white">REZERWUJ<span class="text-blue-500">.AI</span></div>
+                <button onclick="window.history.back()" class="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i> Powrót do wyników
+                </button>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-xs font-mono text-slate-500">ID: REZ-9921-2026</span>
+                <i data-lucide="share-2" class="w-5 h-5 text-slate-400 cursor-pointer hover:text-white"></i>
+                <i data-lucide="heart" class="w-5 h-5 text-slate-400 cursor-pointer hover:text-red-400"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-8 py-10">
+        
+        <div class="mb-10">
+            <div class="flex justify-between items-end mb-6">
+                <div>
+                    <h1 class="text-4xl font-extrabold text-white mb-2 tracking-tight">Mitsis Laguna Resort & Spa</h1>
+                    <p class="text-slate-400 flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-blue-500"></i> Hersonissos, Kreta, Grecja · ★★★★ 4.9 (2,401 opinii)
+                    </p>
+                </div>
+                <div class="text-right hidden md:block">
+                    <p class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-1">Dostępność</p>
+                    <p class="text-teal-400 font-bold flex items-center gap-1 justify-end">
+                        <span class="w-2 h-2 bg-teal-400 rounded-full animate-ping"></span> Potwierdzona przez AI
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-12 grid-rows-2 h-[500px] gap-3 rounded-[2.5rem] overflow-hidden">
+                <div class="col-span-8 row-span-2 relative group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition"></div>
+                </div>
+                <div class="col-span-4 row-span-1 relative group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <div class="col-span-4 row-span-1 relative group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">+24 zdjęcia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-10">
+            
+            <div class="lg:col-span-2 space-y-12">
+                
+                <section class="relative p-8 rounded-[2rem] bg-blue-600/5 border border-blue-500/20 overflow-hidden">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-10 h-10 ai-gradient rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
+                            <i data-lucide="brain-circuit" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold tracking-tight">Analiza Inteligentna</h3>
+                            <p class="text-xs text-blue-400 font-mono">Generowane specjalnie dla profilu: Rodzina 2+2</p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white mb-1">Idealny dla dzieci (6 i 9 l.)</h4>
+                                    <p class="text-xs text-slate-400 leading-relaxed">Hotel posiada wydzieloną strefę 'Junior Club'. AI wykryło 94% pozytywnych opinii o animacjach w języku polskim.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white mb-1">Logistyka bez stresu</h4>
+                                    <p class="text-xs text-slate-400 leading-relaxed">Transfer z lotniska trwa tylko 25 min. To kluczowe przy Twoim locie lądującym o 22:30.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <i data-lucide="trending-down" class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white mb-1">Cena niższa o 14%</h4>
+                                    <p class="text-xs text-slate-400 leading-relaxed">Aktualna cena u Touroperatora jest niższa niż składowe lot + hotel osobno o ok. 1,420 PLN.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <i data-lucide="alert-circle" class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white mb-1">Uwaga od AI</h4>
+                                    <p class="text-xs text-slate-400 leading-relaxed">Opinie wskazują na słabe WiFi w pokojach typu 'Garden'. Sugerujemy wybór 'Superior' dla stabilnej pracy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-extrabold text-white mb-6 flex items-center gap-3">
+                        <i data-lucide="plane" class="w-6 h-6 text-blue-500"></i> Plan Podróży
+                    </h3>
+                    <div class="glass rounded-[2rem] p-8 relative">
+                        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                            <div class="text-center md:text-left">
+                                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2 font-mono">Wylot · 12 Lip</span>
+                                <p class="text-3xl font-black text-white">06:15</p>
+                                <p class="text-sm text-slate-400 font-bold">Katowice (KTW)</p>
+                            </div>
+                            
+                            <div class="flex-1 flex flex-col items-center group cursor-help">
+                                <span class="text-[10px] font-mono text-slate-600 mb-2">2h 55min · Bezpośredni</span>
+                                <div class="w-full h-px bg-slate-800 relative">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 glass rounded-full flex items-center justify-center border-slate-700">
+                                        <i data-lucide="plane" class="w-4 h-4 text-blue-500 rotate-90"></i>
+                                    </div>
+                                    <div class="absolute inset-0 shimmer opacity-50"></div>
+                                </div>
+                                <span class="text-[10px] text-slate-500 mt-2 font-bold uppercase tracking-tighter">Enter Air · B737</span>
+                            </div>
+
+                            <div class="text-center md:text-right">
+                                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2 font-mono">Lądowanie</span>
+                                <p class="text-3xl font-black text-white">10:10</p>
+                                <p class="text-sm text-slate-400 font-bold">Heraklion (HER)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-extrabold text-white mb-6">Co zawiera cena?</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="glass p-4 rounded-2xl text-center">
+                            <i data-lucide="utensils" class="w-6 h-6 text-blue-400 mx-auto mb-2"></i>
+                            <p class="text-xs font-bold">All Inclusive</p>
+                        </div>
+                        <div class="glass p-4 rounded-2xl text-center">
+                            <i data-lucide="briefcase" class="w-6 h-6 text-blue-400 mx-auto mb-2"></i>
+                            <p class="text-xs font-bold">Bagaż 20kg/os</p>
+                        </div>
+                        <div class="glass p-4 rounded-2xl text-center">
+                            <i data-lucide="bus" class="w-6 h-6 text-blue-400 mx-auto mb-2"></i>
+                            <p class="text-xs font-bold">Transfery</p>
+                        </div>
+                        <div class="glass p-4 rounded-2xl text-center">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-blue-400 mx-auto mb-2"></i>
+                            <p class="text-xs font-bold">Ubezpieczenie</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="lg:col-span-1">
+                <div class="glass p-8 rounded-[2.5rem] sticky top-28 border-white/10 shadow-2xl glow-blue">
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-slate-500 text-sm">Cena za całą rodzinę</span>
+                            <span class="text-xs font-bold text-teal-400 bg-teal-400/10 px-2 py-1 rounded">DOSTĘPNE</span>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-5xl font-black text-white tracking-tighter">11,420</span>
+                            <span class="text-xl font-bold text-slate-500 uppercase tracking-widest">PLN</span>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-2 italic">Średnio 2,855 PLN / osobę</p>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex justify-between text-sm py-3 border-b border-white/5">
+                            <span class="text-slate-400">Termin:</span>
+                            <span class="text-white font-bold tracking-tight">12.07 — 19.07 (7 dni)</span>
+                        </div>
+                        <div class="flex justify-between text-sm py-3 border-b border-white/5">
+                            <span class="text-slate-400">Z lotniska:</span>
+                            <span class="text-white font-bold">Katowice (KTW)</span>
+                        </div>
+                        <div class="flex justify-between text-sm py-3 border-b border-white/5">
+                            <span class="text-slate-400">Pokój:</span>
+                            <span class="text-white font-bold">Family Bungalow GV</span>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-blue-600 hover:bg-blue-500 text-white py-5 rounded-2xl font-black text-lg transition-all shadow-xl shadow-blue-600/20 active:scale-95 flex items-center justify-center gap-3">
+                        REZERWUJĘ TERAZ
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                    
+                    <div class="mt-6 flex items-center gap-3 justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/TUI_Logo.svg" class="h-4 opacity-50 grayscale hover:grayscale-0 transition cursor-help" title="Organizator: TUI Poland">
+                        <div class="h-4 w-px bg-white/10"></div>
+                        <p class="text-[10px] text-slate-500 font-medium">Oficjalna oferta partnera</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 glass p-6 rounded-[2rem] border-white/5 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center">
+                        <i data-lucide="phone-call" class="w-5 h-5 text-blue-400"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-white uppercase tracking-widest">Masz pytania?</p>
+                        <p class="text-[10px] text-slate-500">Nasze AI chętnie doprecyzuje ofertę na czacie.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
